@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flores Matías</title>
+
+    <!-- link css NO AL SCSS-->
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <button id="abrir" class="abrir-menu"><i class="fa-solid fa-bars" style="color: #1ea8e8;" ></i></button>
+        
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="fa-solid fa-x" style="color: #1ea8e8;"></i></button>
+            <ul class="nav__list">
+                <li class="nav__list--item"><a href="#inicio">Inicio</a></li>
+                <li class="nav__list--item"><a href="#sobre-mi">Sobre mí</a></li>
+                <li class="nav__list--item"><a href="#tecno">Tecnologías</a></li>
+                <li class="nav__list--item"><a href="">Proyectos</a></li>
+                <li class="nav__list--item"><a href="#complements">Otros</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main class="padre">
+
+        <section class="principal" id="principal">
+            <img class="principal__img" src="./img/foto-cv.jpg" alt="imagen de perfil" />
+
+            <div class="info">
+                <h1 class="info__name">Flores Matías Adrián</h1>
+                <p class="info__dev">Desarrollador Front-end</p>
+                <div class="links">
+                    <a href="https://www.instagram.com/matias_flores04?igsh=ZXNpcG82Z3VoczRh" target="_blank" class="link link--insta"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=5492964416074" target="_blank"
+                        class="link link--whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/MatiasF1204" class="link link--git"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mat%C3%ADas-flores-b3a7b222b/" target="_blank" class="link link--linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <a class="boton-cv hidden" href="./CV-Flores-Matias.pdf" download="CV Flores Matías">Descargar CV</a>
+            <a class="email" target="_blank" href="mailto:matiasflores120402@gmail.com">matiasflores120402@gmail.com</a>
+        </section>
+
+        <section class="sobre-mi" id="sobre-mi">
+            <div class="container">
+                <h2 class="container__title">Sobre mí</h2>
+                <p class="container__parrafo">
+                    Mi nombre es Matías Flores, tengo 22 años y vivo en Tierra del
+                    Fuego, Argentina. Actualmente estoy cursando la <strong>Tecnicatura
+                    Universitaria En Programación</strong> en la UTN, además de estar formándome
+                    como <strong>desarrollador Front-End.</strong>
+                    <br /><br />
+                    Como persona soy organizado, detallista y aprendo rápido. Cuento con
+                    ganas de seguir aprendiendo y adquirir experiencia para el óptimo
+                    desarrollo de la empresa como personal.
+                </p>
+            </div>
+        </section>
+
+        <section class="tecno" id="tecno">
+            <h2 class="tecno__title">Tecnologías</h2>
+            <div>
+                <ul class="lista">
+                    <li class="lista__tipo">
+                        <img class="lista__img" src="./img/html.png" alt="icono html">
+                        <p class="lista__nombre">HTML5</p>
+                    </li>
+                    <li class="lista__tipo">
+                        <img src="./img/css.png" alt="icono css" class="lista__img">
+                        <p class="lista__nombre">CSS3</p>
+                    </li>
+
+                    <li class="lista__tipo">
+                        <img src="./img/bulma.png" alt="icono bulma" class="lista__img">
+                        <p class="lista__nombre">BULMA</p>
+                    </li>
+
+                    <li class="lista__tipo"
+                    ><img src="./img/tailwind.png" alt="icono tailwind" class="lista__img">
+                        <p class="lista__nombre">TAILWIND</p>
+                    </li>
+
+                    <li class="lista__tipo">
+                        <img src="./img/bt.png" alt="icono boootstrap" class="lista__img">
+                        <p class="lista__nombre">BOOTSTRAP</p>
+                    </li>
+
+                    <li class="lista__tipo">
+                        <img src="./img/sass.png" alt="icono sass" class="lista__img">
+                        <p class="lista__nombre">SASS</p>
+                    </li>
+
+                    <li class="lista__tipo tipo-js">
+                        <img src="./img/JS.png" alt="imagen js" class="lista__img lista__img--js">
+                        <p class="lista__nombre lista__nombre--js">JAVASCRIPT</p>
+                    </li>
+
+                    <li class="lista__tipo">
+                        <img src="./img/react.png" alt="imagen react" class="lista__img">
+                        <p class="lista__nombre">REACT</p>
+                    </li>
+                    
+                    <li class="lista__tipo">
+                        <img src="./img/git.png" alt="imagen git y github" class="lista__img">
+                        <p class="lista__nombre">GIT Y GITHUB</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="complements" id="complements">
+            <h2 class="complements__title">Otros</h2>
+            <div>
+                <ul class="otros">
+                    <li class="otros__tipo">
+                        <img src="./img/SCRUM.png" alt="scrum icono" class="otros__img">
+                        <p class="otros__name">SCRUM</p>
+                    </li>
+                    <li class="otros__tipo">
+                        <img src="./img/figma.png" alt="figma icono" class="otros__img">
+                        <p class="otros__name">FIGMA</p>
+                    </li>
+                    <li class="otros__tipo">
+                        <img src="./img/arquitec.png" alt="bem/smacss icono" class="otros__img">
+                        <p class="otros__name">BEM/SMACSS</p>
+                    </li>
+                    <li class="otros__tipo">
+                        <img src="./img/marketing.png" alt="marketing icono" class="otros__img">
+                        <p class="otros__name">MARKETING</p>
+                    </li>
+                    <li class="otros__tipo">
+                        <img src="./img/ux-ui.png" alt="icono diseño ux ui" class="otros__img">
+                        <p class="otros__name">DISEÑO UX/UI</p>
+                    </li>
+                    <li class="otros__tipo">
+                        <img src="./img/excel.png" alt="icono excel" class="otros__img">
+                        <p class="otros__name">EXCEL</p>
+                    </li>
+                    <li class="otros__tipo">
+                        <img src="./img/slack.png" alt="icono slack" class="otros__img">
+                        <p class="otros__name">SLACK</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

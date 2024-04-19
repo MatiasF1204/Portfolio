@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import 'partials/variables';
+@import 'partials/mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    background-color: #343548;
+}
+
+// para que el boton y el menu no se muestre
+.abrir-menu, .nav{
+    display: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    z-index: 10;
+}
+
+.abrir-menu{
+    border: none;
+    background: none;
+    font-size: 37px;
+    padding: 25px;
+
+}
+
+@media screen and (max-width:700px) {
+    .abrir-menu{
+        display: block;
+    }
+
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        z-index: 5;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position:fixed;
+        top: 0;
+        right: 0;
+        background-color: #212234;
+        padding: 2rem;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+
+        .nav__list{
+            flex-direction: column;
+            align-items: end;
+            list-style: none;
+        }
+
+        .nav__list--item{
+            line-height: 50px;
+
+            a{
+                font-size: $font-size-parrafo;
+                color: white;
+                text-decoration: none;
+
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .cerrar-menu{
+            background: none;
+            border: none;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+    }
+    .visible{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+.padre {
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// el principal
+.principal {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;// Centra horizontalmente
+    
+    .principal__img {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        margin-bottom: 20px; // Añade margen inferior para separar la imagen del texto
+    }
+
+    .info {
+        text-align: center;
+        padding: 10px;
+        color: white;
+
+        .info__name {
+            margin-bottom: 10px;
+            font-size: $font-size-titulos;
+            font-weight: $font-weight-titulos;
+        }
+
+        .info__dev {
+            font-weight: $font-weight-parrafos;
+            margin-bottom: 20px;
+            font-size: $font-size-parrafo;
+        }
+
+        .links {
+            margin-bottom: 30px;
+
+            .link {
+                padding: 10px;
+                font-size: 40px;
+                color: rgb(30, 168, 232);
+
+                .fa-brands {
+                    &:hover {
+                        @include hover;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .boton-cv {
+        background-color: white;
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 10px;
+        color: black;
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 3.5px solid rgb(30, 168, 232);
+
+        &:hover {
+            @include hover;
+            background-color: rgb(30, 168, 232);
+            border-bottom: 3.5px solid rgb(2, 76, 185);
+
+        }
+    }
+
+    .email{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background-color: #343548;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-weight: $font-weight-parrafos;
+
+        &:hover{
+            @include hover;
+            font-weight: $font-weight-titulos;
+            color: rgb(110, 208, 253);
+        }
+    }
+}
+
+// sobre mí
+.sobre-mi {
+    width: 50%;
+
+    .container {
+        width: 100%;
+        height: 100%;
+        padding: 30px;
+        color: white;
+
+        .container__title {
+            font-size: $font-size-titulos;
+            font-weight: $font-weight-titulos;
+            margin: 15px 0 25px 0;
+        }
+
+        .container__parrafo {
+            font-size: $font-size-parrafo;
+            font-weight: $font-weight-parrafos;
+            line-height: 1.5;
+        }
+    }
+}
+
+// sección tecnologías
+.tecno, .complements{
+    width: 100%;
+    padding: 0 10px 20px;
+
+    .tecno__title, .complements__title{
+        color: white;
+        font-size: $font-size-titulos;
+        font-weight: $font-weight-titulos;
+        margin-bottom: 25px;
+        margin-left: 15px;
+        margin-top: 50px;
+    }
+
+    .lista, .otros {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 14px;
+
+        .lista__tipo, .otros__tipo{
+            list-style: none;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+
+            .lista__img, .otros__img{
+                width: 50px;
+                margin-right: 10px;
+            }
+
+            .lista__img--js{
+                width: 65px;
+            }
+
+            .lista__nombre, .otros__name{
+                font-size: 20px;
+                color: white;
+            }
+        }
+
+        .tipo-js{
+            padding: 2.5px;
+        }
+    }
+}
+
+// table
+@media only screen and (max-width: 700px) {
+    header{
+        margin-bottom: -55px;
+    }
+    .principal,
+    .sobre-mi {
+        width: 100%;
+    }
+
+    .principal{
+        height: 100vh;
+        margin-top: 23%;
+    }
+
+    .sobre-mi {
+        margin-top: -70px;
+    }
+
+    .tecno, .complements{
+        padding: 0 20px 20px;
+    
+        .lista, .otros {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            height: 400px; 
+            gap: 10px;
+
+    
+            .lista__tipo, .otros__tipo{
+                width: 50%;
+
+                .lista__img, .otros__img{
+                    width: 40px;
+                    margin-right: 10px;
+                }
+    
+                .lista__img--js{
+                    margin-top: 2px;
+                    width: 52px;
+                }
+
+                .lista__nombre, .otros__name{
+                    font-size: .9rem;
+                }
+
+                .lista__nombre--js{
+                    margin-left: -5.5px;
+                }
+            }
+        }
+
+    }
+    .complements{
+        margin-top: -60px;
+    }
+}
+
+
+
+
