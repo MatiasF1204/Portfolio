@@ -3,3 +3,12 @@
     transition: transform 0.3s ease;/* Agregar una transición para suavizar el cambio de tamaño */
     transform: scale(1.1); /* Aumentar ligeramente el tamaño al pasar el mouse */
 }
+
+@mixin section-title{
+    color: white;
+    font-size: $font-size-titulos;
+    font-weight: $font-weight-titulos;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    margin-top: 50px;
+}

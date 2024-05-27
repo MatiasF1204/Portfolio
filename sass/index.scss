@@ -6,86 +6,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-        font-family: "Lexend", sans-serif;
+    font-family: "Lexend", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
 body {
-    background-color: #343548;
+    background-color: #313148;
 }
 
-// para que el boton y el menu no se muestre
-.abrir-menu, .nav{
-    display: none;
-}
-
-header{
-    display: flex;
-    justify-content: flex-end;
-    z-index: 10;
-}
-
-.abrir-menu{
-    border: none;
-    background: none;
-    font-size: 37px;
-    padding: 25px;
-
-}
-
-@media screen and (max-width:700px) {
-    .abrir-menu{
-        display: block;
-    }
-
-    .nav{
-        opacity: 0;
-        visibility: hidden;
-        z-index: 5;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: 1rem;
-        position:fixed;
-        top: 0;
-        right: 0;
-        background-color: #212234;
-        padding: 2rem;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-
-        .nav__list{
-            flex-direction: column;
-            align-items: end;
-            list-style: none;
+@media screen and (max-width:400px) {
+    .navbar-fixed{
+        .container__title{
+            font-size: 19px;
         }
-
-        .nav__list--item{
-            line-height: 50px;
-
-            a{
-                font-size: $font-size-parrafo;
-                color: white;
-                text-decoration: none;
-
-
-                &:hover{
-                    text-decoration: underline;
-                }
-            }
-        }
-
-        .cerrar-menu{
-            background: none;
-            border: none;
-            font-size: 23px;
-            margin-bottom: 15px;
-        }
-    }
-    .visible{
-        opacity: 1;
-        visibility: visible;
     }
 }
 
@@ -94,6 +28,7 @@ header{
     z-index: 0;
     display: flex;
     flex-wrap: wrap;
+    padding: 0 30px;
 }
 
 // el principal
@@ -124,9 +59,25 @@ header{
         }
 
         .info__dev {
+            margin-left: 20px;
             font-weight: $font-weight-parrafos;
+            text-align: center;
             margin-bottom: 20px;
             font-size: $font-size-parrafo;
+            display: block;
+            white-space: nowrap;
+            border-right: 4px solid;
+            width: 21ch;
+            animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+            overflow: hidden;
+        }
+
+        @keyframes typing {
+            from {width: 0;}
+        }
+
+        @keyframes blink {
+            50% {border-color: transparent;}
         }
 
         .links {
@@ -135,7 +86,7 @@ header{
             .link {
                 padding: 10px;
                 font-size: 40px;
-                color: rgb(30, 168, 232);
+                color: #1de9b6;
 
                 .fa-brands {
                     &:hover {
@@ -155,7 +106,7 @@ header{
         color: black;
         text-decoration: none;
         font-weight: 500;
-        border-bottom: 3.5px solid rgb(30, 168, 232);
+        border-bottom: 4px solid #4db6ac;
 
         &:hover {
             @include hover;
@@ -166,12 +117,12 @@ header{
     }
 
     .email{
+        z-index: 99;
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
         padding: 10px;
-        background-color: #343548;
         text-align: center;
         text-decoration: none;
         color: white;
@@ -180,7 +131,7 @@ header{
         &:hover{
             @include hover;
             font-weight: $font-weight-titulos;
-            color: rgb(110, 208, 253);
+            color: rgb(255, 255, 255);
         }
     }
 }
@@ -189,19 +140,19 @@ header{
 .sobre-mi {
     width: 50%;
 
-    .container {
+    .box {
         width: 100%;
         height: 100%;
         padding: 30px;
         color: white;
 
-        .container__title {
+        .box__title {
             font-size: $font-size-titulos;
             font-weight: $font-weight-titulos;
             margin: 15px 0 25px 0;
         }
 
-        .container__parrafo {
+        .box__parrafo {
             font-size: $font-size-parrafo;
             font-weight: $font-weight-parrafos;
             line-height: 1.5;
@@ -215,12 +166,7 @@ header{
     padding: 0 10px 20px;
 
     .tecno__title, .complements__title{
-        color: white;
-        font-size: $font-size-titulos;
-        font-weight: $font-weight-titulos;
-        margin-bottom: 25px;
-        margin-left: 15px;
-        margin-top: 50px;
+        @include section-title;
     }
 
     .lista, .otros {
@@ -256,11 +202,22 @@ header{
     }
 }
 
-// table
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 780px) {
+    .complements{
+        margin-bottom: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 780px) {
+    .padre{
+        padding: 0;
+    }
+    
     header{
         margin-bottom: -55px;
     }
+    
     .principal,
     .sobre-mi {
         width: 100%;
@@ -301,7 +258,7 @@ header{
                 }
 
                 .lista__nombre, .otros__name{
-                    font-size: .9rem;
+                    font-size: 1rem;
                 }
 
                 .lista__nombre--js{
@@ -316,6 +273,30 @@ header{
     }
 }
 
+// sección de proyectos
 
+.proyectos{
+    &__title{
+        @include section-title;
+        margin-left: 25px;
+    }
+
+    .proyect__desc{
+        font-size: 20px;
+    }
+
+    .container {
+        .card-title{
+            color: #00695c;
+            font-size: 22px;
+            font-weight: bold;
+            padding-bottom: 17px;
+        }
+
+        .card__desc{
+            font-size: 17px;
+        }
+    }
+}
 
 

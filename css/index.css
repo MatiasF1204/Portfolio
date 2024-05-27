@@ -10,77 +10,19 @@
 }
 
 body {
-  background-color: #343548;
+  background-color: #313148;
 }
 
-.abrir-menu, .nav {
-  display: none;
-}
-
-header {
-  display: flex;
-  justify-content: flex-end;
-  z-index: 10;
-}
-
-.abrir-menu {
-  border: none;
-  background: none;
-  font-size: 37px;
-  padding: 25px;
-}
-
-@media screen and (max-width: 700px) {
-  .abrir-menu {
-    display: block;
-  }
-  .nav {
-    opacity: 0;
-    visibility: hidden;
-    z-index: 5;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    gap: 1rem;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #212234;
-    padding: 2rem;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-  }
-  .nav .nav__list {
-    flex-direction: column;
-    align-items: end;
-    list-style: none;
-  }
-  .nav .nav__list--item {
-    line-height: 50px;
-  }
-  .nav .nav__list--item a {
-    font-size: 1.3rem;
-    color: white;
-    text-decoration: none;
-  }
-  .nav .nav__list--item a:hover {
-    text-decoration: underline;
-  }
-  .nav .cerrar-menu {
-    background: none;
-    border: none;
-    font-size: 23px;
-    margin-bottom: 15px;
-  }
-  .visible {
-    opacity: 1;
-    visibility: visible;
+@media screen and (max-width: 400px) {
+  .navbar-fixed .container__title {
+    font-size: 19px;
   }
 }
 .padre {
   z-index: 0;
   display: flex;
   flex-wrap: wrap;
+  padding: 0 30px;
 }
 
 .principal {
@@ -108,9 +50,27 @@ header {
   font-weight: 500;
 }
 .principal .info .info__dev {
+  margin-left: 20px;
   font-weight: 200;
+  text-align: center;
   margin-bottom: 20px;
   font-size: 1.3rem;
+  display: block;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 21ch;
+  animation: typing 2s steps(12), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 .principal .info .links {
   margin-bottom: 30px;
@@ -118,7 +78,7 @@ header {
 .principal .info .links .link {
   padding: 10px;
   font-size: 40px;
-  color: rgb(30, 168, 232);
+  color: #1de9b6;
 }
 .principal .info .links .link .fa-brands:hover {
   transition: transform 0.3s ease; /* Agregar una transición para suavizar el cambio de tamaño */
@@ -133,7 +93,7 @@ header {
   color: black;
   text-decoration: none;
   font-weight: 500;
-  border-bottom: 3.5px solid rgb(30, 168, 232);
+  border-bottom: 4px solid #4db6ac;
 }
 .principal .boton-cv:hover {
   transition: transform 0.3s ease; /* Agregar una transición para suavizar el cambio de tamaño */
@@ -142,12 +102,12 @@ header {
   border-bottom: 3.5px solid rgb(2, 76, 185);
 }
 .principal .email {
+  z-index: 99;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   padding: 10px;
-  background-color: #343548;
   text-align: center;
   text-decoration: none;
   color: white;
@@ -157,24 +117,24 @@ header {
   transition: transform 0.3s ease; /* Agregar una transición para suavizar el cambio de tamaño */
   transform: scale(1.1); /* Aumentar ligeramente el tamaño al pasar el mouse */
   font-weight: 500;
-  color: rgb(110, 208, 253);
+  color: rgb(255, 255, 255);
 }
 
 .sobre-mi {
   width: 50%;
 }
-.sobre-mi .container {
+.sobre-mi .box {
   width: 100%;
   height: 100%;
   padding: 30px;
   color: white;
 }
-.sobre-mi .container .container__title {
+.sobre-mi .box .box__title {
   font-size: 1.9rem;
   font-weight: 500;
   margin: 15px 0 25px 0;
 }
-.sobre-mi .container .container__parrafo {
+.sobre-mi .box .box__parrafo {
   font-size: 1.3rem;
   font-weight: 200;
   line-height: 1.5;
@@ -219,7 +179,15 @@ header {
   padding: 2.5px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 780px) {
+  .complements {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .padre {
+    padding: 0;
+  }
   header {
     margin-bottom: -55px;
   }
@@ -257,7 +225,7 @@ header {
     width: 52px;
   }
   .tecno .lista .lista__tipo .lista__nombre, .tecno .lista .lista__tipo .otros__name, .tecno .lista .otros__tipo .lista__nombre, .tecno .lista .otros__tipo .otros__name, .tecno .otros .lista__tipo .lista__nombre, .tecno .otros .lista__tipo .otros__name, .tecno .otros .otros__tipo .lista__nombre, .tecno .otros .otros__tipo .otros__name, .complements .lista .lista__tipo .lista__nombre, .complements .lista .lista__tipo .otros__name, .complements .lista .otros__tipo .lista__nombre, .complements .lista .otros__tipo .otros__name, .complements .otros .lista__tipo .lista__nombre, .complements .otros .lista__tipo .otros__name, .complements .otros .otros__tipo .lista__nombre, .complements .otros .otros__tipo .otros__name {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .tecno .lista .lista__tipo .lista__nombre--js, .tecno .lista .otros__tipo .lista__nombre--js, .tecno .otros .lista__tipo .lista__nombre--js, .tecno .otros .otros__tipo .lista__nombre--js, .complements .lista .lista__tipo .lista__nombre--js, .complements .lista .otros__tipo .lista__nombre--js, .complements .otros .lista__tipo .lista__nombre--js, .complements .otros .otros__tipo .lista__nombre--js {
     margin-left: -5.5px;
@@ -265,6 +233,27 @@ header {
   .complements {
     margin-top: -60px;
   }
+}
+.proyectos__title {
+  color: white;
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+  margin-left: 15px;
+  margin-top: 50px;
+  margin-left: 25px;
+}
+.proyectos .proyect__desc {
+  font-size: 20px;
+}
+.proyectos .container .card-title {
+  color: #00695c;
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 17px;
+}
+.proyectos .container .card__desc {
+  font-size: 17px;
 }
 
 /*# sourceMappingURL=index.css.map */

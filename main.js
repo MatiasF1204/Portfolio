@@ -1,33 +1,30 @@
-const nav = document.querySelector('#nav');
-const abrir = document.querySelector('#abrir');
-const cerrar = document.querySelector('#cerrar');
-const enlacesMenu = document.querySelectorAll('.nav__list--item a');
+// Inicialización del menú haburguesa
+var options = {};
 
-abrir.addEventListener("click", () => {
-    setTimeout(() => {
-        nav.classList.add("visible");
-    }, 100); // Retraso de 100 milisegundos para permitir la transición
-});
+document.addEventListener('DOMContentLoaded', function () {
+    // Inicialización del menú hamburguesa
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {});
 
-cerrar.addEventListener("click", () => {
-    nav.classList.remove("visible");
-});
-
-// Evento de clic para cada enlace del menú que apunta a una sección interna
-enlacesMenu.forEach(enlace => {
-    enlace.addEventListener('click', (event) => {
-        // Prevenir el comportamiento predeterminado del enlace
+    // Función para manejar el desplazamiento suave y cerrar el menú
+    function smoothScrollAndClose(event) {
         event.preventDefault();
+        var target = $(this).attr('href');
 
-        // Cerrar el menú hamburguesa
-        nav.classList.remove("visible");
-        
-        // Obtener el destino del enlace
-        const destino = enlace.getAttribute('href');
+        // Asegurarse de que el target sea un selector válido
+        if (target && target.startsWith('#') && $(target).length) {
+            // Cerrar el menú hamburguesa
+            var sidenavInstance = M.Sidenav.getInstance(document.querySelector('.sidenav'));
+            sidenavInstance.close();
 
-        // Desplazarse suavemente hasta la sección correspondiente
-        document.querySelector(destino).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+            // Desplazarse a la sección objetivo con margen superior
+            $('html, body').animate({
+                scrollTop: $(target).offset().top - 48 // Ajustar el margen aquí
+            }, 500);
+        }
+    }
+
+    // Adjuntar el manejador de clics a los elementos del menú
+    $('.sidenav a, .nav-wrapper a').on('click', smoothScrollAndClose);
 });
+

@@ -6,8 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flores Matías</title>
 
+    <link rel="shortcut icon" href="./img/icon-p.png" type="image/x-icon">
+
     <!-- link css NO AL SCSS-->
     <link rel="stylesheet" href="./css/index.css" />
+
+    <!-- Link cdn materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
     <!-- link font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -18,23 +26,53 @@
 <body>
 
     <header>
-        <button id="abrir" class="abrir-menu"><i class="fa-solid fa-bars" style="color: #1ea8e8;" ></i></button>
-        
-        <nav class="nav" id="nav">
-            <button class="cerrar-menu" id="cerrar"><i class="fa-solid fa-x" style="color: #1ea8e8;"></i></button>
-            <ul class="nav__list">
-                <li class="nav__list--item"><a href="#inicio">Inicio</a></li>
-                <li class="nav__list--item"><a href="#sobre-mi">Sobre mí</a></li>
-                <li class="nav__list--item"><a href="#tecno">Tecnologías</a></li>
-                <li class="nav__list--item"><a href="">Proyectos</a></li>
-                <li class="nav__list--item"><a href="#complements">Otros</a></li>
-            </ul>
-        </nav>
-        
+        <!-- Menu para tablet y pc -->
+        <div class="navbar-fixed">
+            <nav class="nav-wrapper teal darken-2">
+                <div class="container">
+                    <a href="" class="brand-logo container__title">
+                        Matias Flores
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#principal">Inicio</a></li>
+                        <li><a href="#sobre-mi">Sobre mí</a></li>
+                        <li><a href="#tecno">Tecnologías</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#complements">Otros</a></li>
+                    </ul>
+                    <a href="" data-target="responsive-menu" class="sidenav-trigger right">
+                        <i class="material-icons">menu</i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Menu hamburguesa para mobile -->
+        <div>
+            <ul class="sidenav" id="responsive-menu">
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <img src="./img/sidenav.jpg" alt="">
+                        </div>
+                        <a><img src="./img/foto-cv.jpg" alt="" class="circle"></a>
+                        <a><span class="white-text name">Matias Flores</span></a>
+                        <a><span class="white-text email">matiasflores120402@gmail.com</span></a>
+                <li><a href="#principal">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#tecno">Tecnologías</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li class="divider"></li>
+                <li><a href="#complements">Otros</a></li>
+        </div>
+        </li>
+        </ul>
+        </div>
     </header>
 
     <main class="padre">
 
+        <!-- sección principal de desarrollador frontend --------------------------------------- -->
         <section class="principal" id="principal">
             <img class="principal__img" src="./img/foto-cv.jpg" alt="imagen de perfil" />
 
@@ -42,25 +80,32 @@
                 <h1 class="info__name">Flores Matías Adrián</h1>
                 <p class="info__dev">Desarrollador Front-end</p>
                 <div class="links">
-                    <a href="https://www.instagram.com/matias_flores04?igsh=ZXNpcG82Z3VoczRh" target="_blank" class="link link--insta"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/matias_flores04?igsh=ZXNpcG82Z3VoczRh" target="_blank"
+                        class="link link--insta"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://api.whatsapp.com/send?phone=5492964416074" target="_blank"
                         class="link link--whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://github.com/MatiasF1204" class="link link--git"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/mat%C3%ADas-flores-b3a7b222b/" target="_blank" class="link link--linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/MatiasF1204" class="link link--git"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mat%C3%ADas-flores-b3a7b222b/" target="_blank"
+                        class="link link--linkedin"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
 
             <a class="boton-cv hidden" href="./CV-Flores-Matias.pdf" download="CV Flores Matías">Descargar CV</a>
-            <a class="email" target="_blank" href="mailto:matiasflores120402@gmail.com">matiasflores120402@gmail.com</a>
+            <a class="email teal darken-2" target="_blank"
+                href="mailto:matiasflores120402@gmail.com">matiasflores120402@gmail.com
+            </a>
         </section>
 
+        <!-- sección de sobre mi -------------------------------------------------------- -->
+
         <section class="sobre-mi" id="sobre-mi">
-            <div class="container">
-                <h2 class="container__title">Sobre mí</h2>
-                <p class="container__parrafo">
+            <div class="box">
+                <h2 class="box__title">Sobre mí</h2>
+                <p class="box__parrafo">
                     Mi nombre es Matías Flores, tengo 22 años y vivo en Tierra del
                     Fuego, Argentina. Actualmente estoy cursando la <strong>Tecnicatura
-                    Universitaria En Programación</strong> en la UTN, además de estar formándome
+                        Universitaria En Programación</strong> en la UTN, además de estar formándome
                     como <strong>desarrollador Front-End.</strong>
                     <br /><br />
                     Como persona soy organizado, detallista y aprendo rápido. Cuento con
@@ -69,6 +114,8 @@
                 </p>
             </div>
         </section>
+
+        <!-- sección de tecnologías -------------------------------------------------------- -->
 
         <section class="tecno" id="tecno">
             <h2 class="tecno__title">Tecnologías</h2>
@@ -84,18 +131,13 @@
                     </li>
 
                     <li class="lista__tipo">
-                        <img src="./img/bulma.png" alt="icono bulma" class="lista__img">
-                        <p class="lista__nombre">BULMA</p>
-                    </li>
-
-                    <li class="lista__tipo"
-                    ><img src="./img/tailwind.png" alt="icono tailwind" class="lista__img">
-                        <p class="lista__nombre">TAILWIND</p>
+                        <img src="./img/bt.png" alt="icono boootstrap" class="lista__img">
+                        <p class="lista__nombre">BOOTSTRAP</p>
                     </li>
 
                     <li class="lista__tipo">
-                        <img src="./img/bt.png" alt="icono boootstrap" class="lista__img">
-                        <p class="lista__nombre">BOOTSTRAP</p>
+                        <img src="./img/materializecss.svg" alt="icono materialize" class="lista__img">
+                        <p class="lista__nombre">MATERIALIZE</p>
                     </li>
 
                     <li class="lista__tipo">
@@ -112,7 +154,7 @@
                         <img src="./img/react.png" alt="imagen react" class="lista__img">
                         <p class="lista__nombre">REACT</p>
                     </li>
-                    
+
                     <li class="lista__tipo">
                         <img src="./img/git.png" alt="imagen git y github" class="lista__img">
                         <p class="lista__nombre">GIT Y GITHUB</p>
@@ -120,6 +162,111 @@
                 </ul>
             </div>
         </section>
+
+        <!-- sección de PROYECTOS -------------------------------------------------------- -->
+        <section class="proyectos" id="proyectos">
+            <h2 class="proyectos__title">Proyectos</h2>
+
+            <div class="container">
+                <div class="row">
+
+                    <!-- PROYECTO TRAVELMIND ------------------------>
+                    <div class="col s12 m6">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="./img/Travel.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">TravelMind</span>
+
+                                <p class="card__desc">
+                                    Página OnePage simple construida con <span class="text-">HTML, Materialize CSS y JavaScript,</span> diseñada
+                                    para practicar y perfeccionar las habilidades en el uso de Materialize.
+                                </p>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://matiasf1204.github.io/TravelMind/" class="blue-text"
+                                    target="_blank">DEMO</a>
+                                <a href="https://github.com/MatiasF1204/TravelMind.git" class="blue-text"
+                                    target="_blank">GITHUB</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROYECTO PIZZAS C&C ------------------------>
+                    <div class="col s12 m6">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="./img/Travel.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">TravelMind</span>
+
+                                <p class="card__desc">
+                                    Página OnePage simple construida con <span class="text-">HTML, Materialize CSS y JavaScript,</span> diseñada
+                                    para practicar y perfeccionar las habilidades en el uso de Materialize.
+                                </p>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://matiasf1204.github.io/TravelMind/" class="blue-text"
+                                    target="_blank">DEMO</a>
+                                <a href="https://github.com/MatiasF1204/TravelMind.git" class="blue-text"
+                                    target="_blank">GITHUB</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m6">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="./img/Travel.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">TravelMind</span>
+
+                                <p class="card__desc">
+                                    Página OnePage simple construida con <span class="text-">HTML, Materialize CSS y JavaScript,</span> diseñada
+                                    para practicar y perfeccionar las habilidades en el uso de Materialize.
+                                </p>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://matiasf1204.github.io/TravelMind/" class="blue-text"
+                                    target="_blank">DEMO</a>
+                                <a href="https://github.com/MatiasF1204/TravelMind.git" class="blue-text"
+                                    target="_blank">GITHUB</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m6">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="./img/Travel.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">TravelMind</span>
+
+                                <p class="card__desc">
+                                    Página OnePage simple construida con <span class="text-">HTML, Materialize CSS y JavaScript,</span> diseñada
+                                    para practicar y perfeccionar las habilidades en el uso de Materialize.
+                                </p>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://matiasf1204.github.io/TravelMind/" class="blue-text"
+                                    target="_blank">DEMO</a>
+                                <a href="https://github.com/MatiasF1204/TravelMind.git" class="blue-text"
+                                    target="_blank">GITHUB</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- sección de otros / complementos -------------------------------------------------------- -->
 
         <section class="complements" id="complements">
             <h2 class="complements__title">Otros</h2>
@@ -130,28 +277,21 @@
                         <p class="otros__name">SCRUM</p>
                     </li>
                     <li class="otros__tipo">
+                        <img src="./img/ux-ui.png" alt="icono diseño ux ui" class="otros__img">
+                        <p class="otros__name">DISEÑO UX/UI</p>
+                    </li>
+                    <li class="otros__tipo">
                         <img src="./img/figma.png" alt="figma icono" class="otros__img">
                         <p class="otros__name">FIGMA</p>
                     </li>
                     <li class="otros__tipo">
                         <img src="./img/arquitec.png" alt="bem/smacss icono" class="otros__img">
-                        <p class="otros__name">BEM/SMACSS</p>
+                        <p class="otros__name">CSS BEM</p>
                     </li>
-                    <li class="otros__tipo">
-                        <img src="./img/marketing.png" alt="marketing icono" class="otros__img">
-                        <p class="otros__name">MARKETING</p>
-                    </li>
-                    <li class="otros__tipo">
-                        <img src="./img/ux-ui.png" alt="icono diseño ux ui" class="otros__img">
-                        <p class="otros__name">DISEÑO UX/UI</p>
-                    </li>
+
                     <li class="otros__tipo">
                         <img src="./img/excel.png" alt="icono excel" class="otros__img">
                         <p class="otros__name">EXCEL</p>
-                    </li>
-                    <li class="otros__tipo">
-                        <img src="./img/slack.png" alt="icono slack" class="otros__img">
-                        <p class="otros__name">SLACK</p>
                     </li>
                 </ul>
             </div>
@@ -159,6 +299,11 @@
 
     </main>
 
+    <!-- Import jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Compiled and minified JavaScript Materialize-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- script -->
     <script src="./main.js"></script>
 </body>
 
