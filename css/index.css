@@ -21,7 +21,6 @@ body {
 
 .navbar-fixed .container__title {
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
   flex-wrap: nowrap;
 }
@@ -218,6 +217,11 @@ body {
   font-size: 17px;
 }
 
+@media only screen and (max-width: 992px) {
+  .navbar-fixed .container__title .code-logo {
+    padding-left: 50px;
+  }
+}
 @media only screen and (max-width: 880px) {
   .padre {
     padding: 0;
@@ -226,6 +230,7 @@ body {
     font-size: 20px;
   }
   .navbar-fixed .container__title .code-logo {
+    padding-left: 20px;
     font-size: 30px;
   }
   .principal,

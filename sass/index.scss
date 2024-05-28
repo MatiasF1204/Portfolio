@@ -25,7 +25,6 @@ body {
 .navbar-fixed {
     .container__title {
         display: flex;
-        flex-direction: row-reverse;
         align-items: center;
         flex-wrap: nowrap;
 
@@ -244,18 +243,30 @@ body {
 
 
 // MEDIA QUERIES PARA EL RESPONSIVE
+@media only screen and (max-width: 992px) {
+    .navbar-fixed {
+        .container__title {
+            .code-logo {
+                padding-left: 50px;
+            }
+        }
+    }
+}
 @media only screen and (max-width: 880px) {
     .padre {
         padding: 0;
     }
 
     .navbar-fixed {
+
         .container__title {
             .code-title {
                 font-size: 20px;
             }
 
             .code-logo {
+                padding-left: 20px;
+
                 font-size: 30px;
             }
         }
