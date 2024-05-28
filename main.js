@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Desplazarse a la sección objetivo con margen superior
             $('html, body').animate({
-                scrollTop: $(target).offset().top - 48 // Ajustar el margen aquí
+                scrollTop: $(target).offset().top - 40 // Ajustar el margen aquí
             }, 500);
         }
     }
@@ -28,3 +28,5 @@ document.addEventListener('DOMContentLoaded', function () {
     $('.sidenav a, .nav-wrapper a').on('click', smoothScrollAndClose);
 });
 
+// Activación de wow.js
+new WOW().init();

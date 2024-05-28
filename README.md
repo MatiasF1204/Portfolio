@@ -8,3 +8,4 @@ Portoflio realizado con **HTML, CSS/SASS, MATERIALIZE y JAVASCRIPT**, ontiene mi
 - Proyectos: Para que la persona interesada pueda acceder a principales proyectos realizados en mi trayecto como desarrollador frontend.
 - Otros: Otros conocimientos en metodologías y herramientas los cuales considero relevante nombrar, tales como SCRUM, Diseño UX/UI y demás.
 
+También incluye el uso de Animate CSS para las animcaciones acompañado de wow.js para las funcionalidades de las mismas.

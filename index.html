@@ -17,6 +17,9 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
+    <!-- Import animate css por cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <!-- link font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -28,17 +31,17 @@
     <header>
         <!-- Menu para tablet y pc -->
         <div class="navbar-fixed">
-            <nav class="nav-wrapper teal darken-2">
+            <nav class="nav-wrapper blue darken-3">
                 <div class="container">
-                    <a href="" class="brand-logo container__title">
-                        Matias Flores
+                    <a class="brand-logo container__title wow animate__animated animate__backInDown">
+                        <p class="code-title">Flores Matias</p>
+                        <i class="material-icons code-logo">code</i>
                     </a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="#principal">Inicio</a></li>
                         <li><a href="#sobre-mi">Sobre mí</a></li>
                         <li><a href="#tecno">Tecnologías</a></li>
                         <li><a href="#proyectos">Proyectos</a></li>
-                        <li><a href="#complements">Otros</a></li>
                     </ul>
                     <a href="" data-target="responsive-menu" class="sidenav-trigger right">
                         <i class="material-icons">menu</i>
@@ -62,8 +65,7 @@
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#tecno">Tecnologías</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
-                <li class="divider"></li>
-                <li><a href="#complements">Otros</a></li>
+                <!-- <li class="divider"></li> -->
         </div>
         </li>
         </ul>
@@ -74,41 +76,40 @@
 
         <!-- sección principal de desarrollador frontend --------------------------------------- -->
         <section class="principal" id="principal">
-            <img class="principal__img" src="./img/foto-cv.jpg" alt="imagen de perfil" />
-
-            <div class="info">
-                <h1 class="info__name">Flores Matías Adrián</h1>
-                <p class="info__dev">Desarrollador Front-end</p>
-                <div class="links">
-                    <a href="https://www.instagram.com/matias_flores04?igsh=ZXNpcG82Z3VoczRh" target="_blank"
-                        class="link link--insta"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=5492964416074" target="_blank"
-                        class="link link--whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://github.com/MatiasF1204" class="link link--git"><i
-                            class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/mat%C3%ADas-flores-b3a7b222b/" target="_blank"
-                        class="link link--linkedin"><i class="fa-brands fa-linkedin"></i></a>
+            <div class="principal__container">
+                <img class="principal__img" src="./img/codeIMG.png" alt="imagen de perfil" />
+                <div class="info">
+                    <h1 class="info__name">Flores Matías Adrián</h1>
+                    <p class="info__dev">Desarrollador Front-end</p>
+                    <div class="links">
+                        <a href="https://www.instagram.com/matias_flores04?igsh=ZXNpcG82Z3VoczRh" target="_blank"
+                            class="link link--insta"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=5492964416074" target="_blank"
+                            class="link link--whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://github.com/MatiasF1204" class="link link--git"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/mat%C3%ADas-flores-b3a7b222b/" target="_blank"
+                            class="link link--linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
                 </div>
+                <a class="boton-cv hidden" href="./CV-Flores-Matias.pdf" download="CV Flores Matías">Descargar CV</a>
             </div>
-
-            <a class="boton-cv hidden" href="./CV-Flores-Matias.pdf" download="CV Flores Matías">Descargar CV</a>
-            <a class="email teal darken-2" target="_blank"
-                href="mailto:matiasflores120402@gmail.com">matiasflores120402@gmail.com
-            </a>
         </section>
 
         <!-- sección de sobre mi -------------------------------------------------------- -->
 
-        <section class="sobre-mi" id="sobre-mi">
+        <section class="sobre-mi wow animate__animated animate__backInLeft" id="sobre-mi">
             <div class="box">
                 <h2 class="box__title">Sobre mí</h2>
+                <hr class="subrayado">
                 <p class="box__parrafo">
                     Mi nombre es Matías Flores, tengo 22 años y vivo en Tierra del
                     Fuego, Argentina. Actualmente estoy cursando la <strong>Tecnicatura
                         Universitaria En Programación</strong> en la UTN, además de estar formándome
                     como <strong>desarrollador Front-End.</strong>
                     <br /><br />
-                    Como persona soy organizado, detallista y aprendo rápido. Cuento con
+                    Como persona soy organizado, detallista y aprendo rápido, con el objetivo de en un futuro llegar
+                    a ser <strong>desarrollador fullstack MERN.</strong> Cuento con
                     ganas de seguir aprendiendo y adquirir experiencia para el óptimo
                     desarrollo de la empresa como personal.
                 </p>
@@ -117,8 +118,9 @@
 
         <!-- sección de tecnologías -------------------------------------------------------- -->
 
-        <section class="tecno" id="tecno">
+        <section class="tecno wow animate__animated animate__backInLeft" id="tecno">
             <h2 class="tecno__title">Tecnologías</h2>
+            <hr class="subrayado">
             <div>
                 <ul class="lista">
                     <li class="lista__tipo">
@@ -164,10 +166,13 @@
         </section>
 
         <!-- sección de PROYECTOS -------------------------------------------------------- -->
-        <section class="proyectos" id="proyectos">
-            <h2 class="proyectos__title">Proyectos</h2>
+        <section class="proyectos wow animate__animated animate__backInLeft" id="proyectos">
+            <div class="proyect-title-container">
+                <h2 class="proyectos__title">Proyectos</h2>
+                <hr class="subrayado">
 
-            <div class="container">
+            </div>
+            <div class="container wow animate__animated animate__backInLeft">
                 <div class="row">
 
                     <!-- PROYECTO TRAVELMIND ------------------------>
@@ -180,7 +185,8 @@
                                 <span class="card-title">TravelMind</span>
 
                                 <p class="card__desc">
-                                    Página OnePage simple construida con <span class="text-">HTML, Materialize CSS y JavaScript,</span> diseñada
+                                    Página OnePage simple construida con <span class="text-">HTML, Materialize CSS y
+                                        JavaScript,</span> diseñada
                                     para practicar y perfeccionar las habilidades en el uso de Materialize.
                                 </p>
                             </div>
@@ -203,7 +209,8 @@
                                 <span class="card-title">TravelMind</span>
 
                                 <p class="card__desc">
-                                    Página OnePage simple construida con <span class="text-">HTML, Materialize CSS y JavaScript,</span> diseñada
+                                    Página OnePage simple construida con <span class="text-">HTML, Materialize CSS y
+                                        JavaScript,</span> diseñada
                                     para practicar y perfeccionar las habilidades en el uso de Materialize.
                                 </p>
                             </div>
@@ -225,7 +232,8 @@
                                 <span class="card-title">TravelMind</span>
 
                                 <p class="card__desc">
-                                    Página OnePage simple construida con <span class="text-">HTML, Materialize CSS y JavaScript,</span> diseñada
+                                    Página OnePage simple construida con <span class="text-">HTML, Materialize CSS y
+                                        JavaScript,</span> diseñada
                                     para practicar y perfeccionar las habilidades en el uso de Materialize.
                                 </p>
                             </div>
@@ -247,7 +255,8 @@
                                 <span class="card-title">TravelMind</span>
 
                                 <p class="card__desc">
-                                    Página OnePage simple construida con <span class="text-">HTML, Materialize CSS y JavaScript,</span> diseñada
+                                    Página OnePage simple construida con <span class="text-">HTML, Materialize CSS y
+                                        JavaScript,</span> diseñada
                                     para practicar y perfeccionar las habilidades en el uso de Materialize.
                                 </p>
                             </div>
@@ -262,43 +271,39 @@
 
                 </div>
             </div>
-
-        </section>
-
-
-        <!-- sección de otros / complementos -------------------------------------------------------- -->
-
-        <section class="complements" id="complements">
-            <h2 class="complements__title">Otros</h2>
-            <div>
-                <ul class="otros">
-                    <li class="otros__tipo">
-                        <img src="./img/SCRUM.png" alt="scrum icono" class="otros__img">
-                        <p class="otros__name">SCRUM</p>
-                    </li>
-                    <li class="otros__tipo">
-                        <img src="./img/ux-ui.png" alt="icono diseño ux ui" class="otros__img">
-                        <p class="otros__name">DISEÑO UX/UI</p>
-                    </li>
-                    <li class="otros__tipo">
-                        <img src="./img/figma.png" alt="figma icono" class="otros__img">
-                        <p class="otros__name">FIGMA</p>
-                    </li>
-                    <li class="otros__tipo">
-                        <img src="./img/arquitec.png" alt="bem/smacss icono" class="otros__img">
-                        <p class="otros__name">CSS BEM</p>
-                    </li>
-
-                    <li class="otros__tipo">
-                        <img src="./img/excel.png" alt="icono excel" class="otros__img">
-                        <p class="otros__name">EXCEL</p>
-                    </li>
-                </ul>
-            </div>
         </section>
 
     </main>
 
+    <footer class="page-footer blue darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">CONECT</h5>
+                    <p class="grey-text text-lighten-4">Gracias por visitar mi portafolio. Contáctame en mis redes
+                        sociales ¡Espero trabajar contigo pronto!</p>
+                </div>
+
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">MENU</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#principal">Inicio</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#sobre-mi">Sobre mí</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#tecno">Tecnologías</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#proyectos">Proyectos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center">
+                © 2014 Copyright | Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- wow.js librería para activación de animate css -->
+    <script src="./js/wow.min.js"></script>
     <!-- Import jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Compiled and minified JavaScript Materialize-->

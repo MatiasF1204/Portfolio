@@ -7,8 +7,15 @@
 @mixin section-title{
     color: white;
     font-size: $font-size-titulos;
-    font-weight: $font-weight-titulos;
-    margin-bottom: 25px;
-    margin-left: 15px;
+    font-weight: bold;
     margin-top: 50px;
+}
+
+@mixin subrayado {
+    width: 100px;
+    height: 4px;
+    border-color:  rgb(55, 140, 251);
+    border-radius: 20px;
+    background-color: rgb(55, 140, 251);
+    margin-bottom: 20px;
 }
