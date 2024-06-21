@@ -165,7 +165,7 @@ body {
 // sección tecnologías
 .tecno {
     width: 100%;
-    padding: 0 40px;
+    padding: 40px;
 
     .subrayado {
         @include subrayado;
@@ -252,7 +252,7 @@ body {
         }
     }
 }
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width: 900px) {
     .padre {
         padding: 0;
     }
@@ -266,7 +266,6 @@ body {
 
             .code-logo {
                 padding-left: 20px;
-
                 font-size: 30px;
             }
         }
@@ -274,12 +273,17 @@ body {
 
     .principal,
     .sobre-mi {
+        position:sticky;
         width: 100%;
     }
 
     .principal {
-        margin-top: -60px;
         height: 100vh;
+        min-height: 650px;
+
+        .principal__container {
+            top: 42%;
+        }
     }
 
     .sobre-mi {
@@ -297,6 +301,7 @@ body {
 
 
     .tecno{
+        padding: 0px 40px;
 
         .lista{
             display: flex;

@@ -144,7 +144,7 @@ body {
 
 .tecno {
   width: 100%;
-  padding: 0 40px;
+  padding: 40px;
 }
 .tecno .subrayado {
   width: 100px;
@@ -222,7 +222,7 @@ body {
     padding-left: 50px;
   }
 }
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width: 900px) {
   .padre {
     padding: 0;
   }
@@ -235,11 +235,15 @@ body {
   }
   .principal,
   .sobre-mi {
+    position: sticky;
     width: 100%;
   }
   .principal {
-    margin-top: -60px;
     height: 100vh;
+    min-height: 650px;
+  }
+  .principal .principal__container {
+    top: 42%;
   }
   .sobre-mi .box .box__title {
     font-size: 30px;
@@ -247,6 +251,9 @@ body {
   .sobre-mi .box .box__parrafo {
     font-weight: 350;
     line-height: 2;
+  }
+  .tecno {
+    padding: 0px 40px;
   }
   .tecno .lista {
     display: flex;
