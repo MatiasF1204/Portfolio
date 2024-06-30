@@ -30,3 +30,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Activación de wow.js
 new WOW().init();
+
+console.log("Hola")
