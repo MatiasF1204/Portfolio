@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: #252536;
+    background-color: #1b2325;
 }
 
 .padre {
@@ -180,16 +180,22 @@ body {
         flex-wrap: wrap;
         justify-content: space-around;
         gap: 14px;
+        align-items: center;
 
         .lista__tipo {
-            list-style: none;
-            padding: 10px;
-            display: flex;
             align-items: center;
+            justify-content: center;
+            min-width: 180px;
+            max-width: 250px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            list-style: none;
+            padding: 12px 10px;
+            display: flex;
 
             .lista__img {
                 width: 50px;
-                margin-right: 10px;
+                padding-right: 10px;
             }
 
             .lista__img--js {
@@ -204,6 +210,7 @@ body {
 
         .tipo-js {
             padding: 2.5px;
+            padding-right: 10px;
         }
     }
 }
@@ -337,6 +344,13 @@ body {
     }
 }
 
+@media screen and (max-width:440px) {
+    .tecno{
+        .lista{
+            height: auto;
+        }
+    }
+}
 
 @media screen and (max-width:330px) {
     .navbar-fixed {
