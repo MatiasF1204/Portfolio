@@ -39,6 +39,10 @@ body {
     }
 }
 
+.sidenav {
+    background-color: #e0dddd !important;
+}
+
 // el principal
 .principal {
     width: 50%;
@@ -70,43 +74,62 @@ body {
             }
 
             .info__dev {
-                margin-left: 6px;
-                font-weight: $font-weight-parrafos;
                 text-align: center;
-                margin-bottom: 15px;
-                font-size: 22px;
-                display: block;
+                margin-bottom: 20px;
+                font-size: 20px;
+                display: inline-block;
                 white-space: nowrap;
-                border-right: 4px solid;
-                width: 20ch;
-                animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+                border-right: 3px solid;
+                animation: typing 2s steps(20, end), blink-caret 0.7s step-end infinite;
                 overflow: hidden;
+                width: auto;
+                /* Ajusta el ancho según el contenido */
+                color: #18bdec;
             }
 
             @keyframes typing {
                 from {
                     width: 0;
                 }
+
+                to {
+                    width: 100%;
+                }
+
+                /* Aquí se ajusta al contenido del span */
             }
 
-            @keyframes blink {
-                50% {
+            @keyframes blink-caret {
+
+                from,
+                to {
                     border-color: transparent;
                 }
+
+                50% {
+                    border-color: #18bdec;
+                }
+
+                /* Color del cursor parpadeante */
             }
+
 
             .links {
                 margin-bottom: 30px;
 
                 .link {
-                    padding: 10px;
-                    font-size: 40px;
-                    color: #86ccff;
+                    font-size: 24px;
+                    background: rgba(255, 255, 255, 0.1);
+                    color: #fff;
+                    margin-right: 8px;
+                    border-radius: 50%;
+                    padding: 8px 13px;
 
                     .fa-brands {
+
                         &:hover {
                             @include hover;
-                            color: white;
+                            color: #18bdec;
                         }
                     }
                 }
@@ -180,37 +203,21 @@ body {
         flex-wrap: wrap;
         justify-content: space-around;
         gap: 14px;
-        align-items: center;
 
         .lista__tipo {
             align-items: center;
             justify-content: center;
-            min-width: 180px;
-            max-width: 250px;
             border-radius: 10px;
             background-color: rgba(0, 0, 0, 0.5);
             list-style: none;
-            padding: 12px 10px;
+            padding: 10px 20px;
             display: flex;
 
-            .lista__img {
-                width: 50px;
-                padding-right: 10px;
-            }
-
-            .lista__img--js {
-                width: 65px;
-            }
-
             .lista__nombre {
+                margin-left: 10px;
                 font-size: 20px;
                 color: white;
             }
-        }
-
-        .tipo-js {
-            padding: 2.5px;
-            padding-right: 10px;
         }
     }
 }
@@ -259,6 +266,7 @@ body {
         }
     }
 }
+
 @media only screen and (max-width: 900px) {
     .padre {
         padding: 0;
@@ -280,7 +288,7 @@ body {
 
     .principal,
     .sobre-mi {
-        position:sticky;
+        position: sticky;
         width: 100%;
     }
 
@@ -306,47 +314,81 @@ body {
         }
     }
 
+    .tecno {
+        padding: 0px;
 
-    .tecno{
-        padding: 0px 40px;
+        .tecno__title,
+        .subrayado {
+            margin-left: 40px;
+        }
 
-        .lista{
+        .lista {
+            padding: 0 40px;
             display: flex;
-            flex-direction: column;
             flex-wrap: wrap;
-            justify-content: flex-start;
-            height: 350px;
-            gap: 10px;
+            height: 300px;
 
+            .lista__tipo {
+                width: 200px;
+                min-width: 200px;
+                max-width: 230px;
+                height: 70px;
 
-            .lista__tipo{
-                width: 50%;
-
-                .lista__img{
+                .lista__img {
+                    margin-right: 8px;
                     width: 40px;
-                    margin-right: 10px;
                 }
 
-                .lista__img--js {
-                    margin-top: 2px;
-                    width: 52px;
+                .lista__nombre {
+                    font-size: 1.2rem;
                 }
 
-                .lista__nombre{
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .tecno {
+        padding: 0px;
+
+        .tecno__title,
+        .subrayado {
+            margin-left: 40px;
+        }
+
+        .lista {
+            padding: 0 10px;
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+
+            .lista__img {
+                margin-right: 8px;
+            }
+
+            .lista__tipo {
+                width: 170px;
+                min-width: 150px;
+                max-width: 200px;
+                height: 55px;
+
+                .lista__img {
+                    margin-right: 8px;
+                    width: 35px;
+                }
+
+                .lista__nombre {
                     font-size: 1rem;
-                }
-
-                .lista__nombre--js {
-                    margin-left: -5.5px;
                 }
             }
         }
     }
 }
 
-@media screen and (max-width:440px) {
-    .tecno{
-        .lista{
+@media screen and (max-width: 377px) {
+    .tecno {
+        .lista {
             height: auto;
         }
     }
