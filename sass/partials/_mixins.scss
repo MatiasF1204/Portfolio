@@ -1,14 +1,14 @@
-// aumentar el tamaño al pasar el mouse
 @mixin hover{
-    transition: transform 0.3s ease;/* Agregar una transición para suavizar el cambio de tamaño */
-    transform: scale(1.1); /* Aumentar ligeramente el tamaño al pasar el mouse */
+    transition: transform 0.3s ease;
+    transform: scale(1.1); 
 }
 
 @mixin section-title{
     color: white;
     font-size: $font-size-titulos;
     font-weight: bold;
-    margin-top: 50px;
+    margin: 0;
+    padding-bottom: 15px
 }
 
 @mixin subrayado {

@@ -1,409 +1,338 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-@import 'partials/variables';
-@import 'partials/mixins';
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import "partials/variables";
+@import "partials/mixins";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 body {
-    background-color: #1b2325;
+  background-color: #1b2325;
 }
 
 .padre {
-    z-index: 0;
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-// estilos del menu
+// Menu Styles
 .navbar-fixed {
-    .container__title {
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
-
-        .code-title {
-            font-size: 22px;
-            margin-left: -10px;
-        }
-
-        .code-logo {
-            font-size: 35px;
-        }
+  .container__title {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    .code-title {
+      font-size: 22px;
     }
+    .code-logo {
+      font-size: 35px;
+    }
+  }
 }
 
-.sidenav {
-    background-color: #e0dddd !important;
-}
-
-// el principal
+// Presentation
 .principal {
-    width: 50%;
-    min-height: auto;
-    position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    .principal__container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        flex-direction: column;
-        align-items: center; // Centra horizontalmente    
+  .principal__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-        .principal__img {
-            width: 300px;
-        }
-
-        .info {
-            text-align: center;
-            color: white;
-
-            .info__name {
-                margin-top: 0;
-                margin-bottom: 10px;
-                font-size: $font-size-titulos;
-                font-weight: $font-weight-titulos;
-            }
-
-            .info__dev {
-                text-align: center;
-                margin-bottom: 20px;
-                font-size: 20px;
-                display: inline-block;
-                white-space: nowrap;
-                border-right: 3px solid;
-                animation: typing 2s steps(20, end), blink-caret 0.7s step-end infinite;
-                overflow: hidden;
-                width: auto;
-                /* Ajusta el ancho según el contenido */
-                color: #18bdec;
-            }
-
-            @keyframes typing {
-                from {
-                    width: 0;
-                }
-
-                to {
-                    width: 100%;
-                }
-
-                /* Aquí se ajusta al contenido del span */
-            }
-
-            @keyframes blink-caret {
-
-                from,
-                to {
-                    border-color: transparent;
-                }
-
-                50% {
-                    border-color: #18bdec;
-                }
-
-                /* Color del cursor parpadeante */
-            }
-
-
-            .links {
-                margin-bottom: 30px;
-
-                .link {
-                    font-size: 24px;
-                    background: rgba(255, 255, 255, 0.1);
-                    color: #fff;
-                    margin-right: 8px;
-                    border-radius: 50%;
-                    padding: 8px 13px;
-
-                    .fa-brands {
-
-                        &:hover {
-                            @include hover;
-                            color: #18bdec;
-                        }
-                    }
-                }
-            }
-        }
-
-        .boton-cv {
-            background-color: white;
-            padding: 15px;
-            font-size: 18px;
-            border-radius: 10px;
-            color: black;
-            text-decoration: none;
-            font-weight: 500;
-            border-bottom: 4px solid #2e87a4;
-
-            &:hover {
-                @include hover;
-                background-color: rgb(30, 168, 232);
-                border-bottom: 3.5px solid rgb(2, 76, 185);
-            }
-        }
-    }
-}
-
-// sobre mí
-.sobre-mi {
-    width: 50%;
-    min-height: 550px;
-
-    .box {
-        width: 100%;
-        height: 100%;
-        padding: 35px;
-        color: #ffffff;
-
-        .box__title {
-            color: #ffffff;
-            font-size: $font-size-titulos;
-            font-weight: bold;
-            margin: 15px 0 10px 0;
-        }
-
-        .subrayado {
-            @include subrayado;
-        }
-
-        .box__parrafo {
-            font-size: $font-size-parrafo;
-            font-weight: 300;
-            line-height: 1.8;
-        }
-    }
-}
-
-// sección tecnologías
-.tecno {
-    width: 100%;
-    padding: 40px;
-
-    .subrayado {
-        @include subrayado;
+    .principal__img {
+      width: 30vw;
     }
 
-    .tecno__title {
-        @include section-title;
-    }
+    .info {
+      text-align: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
 
-    .lista {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 14px;
+      .info__name {
+        font-size: $font-size-titulos;
+        font-weight: $font-weight-titulos;
+        margin: 0;
+        padding-bottom: 10px;
+      }
 
-        .lista__tipo {
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            list-style: none;
-            padding: 10px 20px;
-            display: flex;
-
-            .lista__nombre {
-                margin-left: 10px;
-                font-size: 20px;
-                color: white;
-            }
-        }
-    }
-}
-
-// sección de proyectos
-
-.proyectos {
-    .proyect-title-container {
-        padding: 0 40px;
-    }
-
-    .subrayado {
-        @include subrayado;
-    }
-
-    &__title {
-        @include section-title;
-    }
-
-    .proyect__desc {
+      .info__dev {
         font-size: 20px;
+        white-space: nowrap;
+        border-right: 3px solid;
+        animation: typing 2s steps(20, end), blink-caret 0.7s step-end infinite;
+        overflow: hidden;
+        color: #18bdec;
+      }
+
+      // Typing animation
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: #18bdec;
+        }
+      }
+
+      .links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 10px 0 25px;
+
+        .link {
+          font-size: 25px;
+          background: rgba(255, 255, 255, 0.1);
+          color: #fff;
+          border-radius: 50%;
+          padding: 8px 15px;
+
+          .fa-brands {
+            &:hover {
+              @include hover;
+              color: #18bdec;
+            }
+          }
+        }
+      }
     }
 
-    .container {
-        .card-title {
-            color: #1d65e3;
-            font-size: 22px;
-            font-weight: bold;
-            padding-bottom: 17px;
-        }
+    .boton-cv {
+      background-color: white;
+      padding: 15px;
+      font-size: 20px;
+      border-radius: 10px;
+      color: black;
+      font-weight: 600;
+      border-bottom: 4px solid #2e87a4;
 
-        .card__desc {
-            font-size: 17px;
-        }
+      &:hover {
+        @include hover;
+        color: white;
+        background-color: rgb(50, 163, 216);
+        border-bottom: 3.5px solid rgb(6, 55, 128);
+      }
     }
+  }
 }
 
+// About me
+.sobre-mi {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 35px;
 
-// MEDIA QUERIES PARA EL RESPONSIVE
-@media only screen and (max-width: 992px) {
-    .navbar-fixed {
-        .container__title {
-            .code-logo {
-                padding-left: 50px;
-            }
-        }
+  .box {
+    color: #ffffff;
+
+    .box__title {
+      @include section-title;
     }
+
+    .subrayado {
+      @include subrayado;
+    }
+
+    .box__parrafo {
+      font-size: $font-size-parrafo;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+  }
+}
+
+// Technolgies section
+.tecno {
+  width: 100%;
+  padding: 35px;
+
+  .subrayado {
+    @include subrayado;
+  }
+
+  .tecno__title {
+    @include section-title;
+  }
+
+  .lista {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    gap: 15px;
+
+    .lista__tipo {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      align-items: center;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+
+      .lista__nombre {
+        font-size: 20px;
+        color: white;
+      }
+
+      .lista__img {
+        width: 50px;
+      }
+    }
+  }
+}
+
+// Projects
+.proyectos {
+  .proyect-title-container {
+    padding: 0 35px;
+  }
+
+  .subrayado {
+    @include subrayado;
+  }
+
+  &__title {
+    @include section-title;
+  }
+
+  .proyect__desc {
+    font-size: 20px;
+  }
+
+  .container {
+    .card-title {
+      font-size: 25px;
+      font-weight: bold;
+      padding-bottom: 15px;
+    }
+
+    .card__desc {
+      font-size: 20px;
+    }
+  }
+}
+
+// RESPONSIVE FOR TABLET
+@media only screen and (max-width: 990px) {
+  .navbar-fixed {
+    .container__title {
+      .code-logo {
+        padding-left: 50px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 900px) {
-    .padre {
-        padding: 0;
+  .padre {
+    padding: 0;
+    gap: 50px;
+  }
+
+  .navbar-fixed {
+    .container__title {
+      .code-title {
+        font-size: 20px;
+      }
+
+      .code-logo {
+        padding-left: 20px;
+        font-size: 30px;
+      }
     }
+  }
 
-    .navbar-fixed {
+  .principal,
+  .sobre-mi {
+    width: 100%;
+  }
 
-        .container__title {
-            .code-title {
-                font-size: 20px;
-            }
+  .principal {
+    height: 100vh;
+    min-height: 650px;
+  }
 
-            .code-logo {
-                padding-left: 20px;
-                font-size: 30px;
-            }
-        }
+  .sobre-mi {
+    .box {
+      .box__title {
+        font-size: 30px;
+      }
+
+      .box__parrafo {
+        font-weight: 350;
+        line-height: 2;
+      }
     }
+  }
 
-    .principal,
-    .sobre-mi {
-        position: sticky;
-        width: 100%;
-    }
+  .tecno {
+    padding: 0 35px;
 
-    .principal {
-        height: 100vh;
-        min-height: 650px;
+    .lista {
+      .lista__tipo {
+        width: 220px;
 
-        .principal__container {
-            top: 42%;
-        }
-    }
-
-    .sobre-mi {
-        .box {
-            .box__title {
-                font-size: 30px;
-            }
-
-            .box__parrafo {
-                font-weight: 350;
-                line-height: 2;
-            }
-        }
-    }
-
-    .tecno {
-        padding: 0px;
-
-        .tecno__title,
-        .subrayado {
-            margin-left: 40px;
+        .lista__img {
+          width: 45px;
         }
 
-        .lista {
-            padding: 0 40px;
-            display: flex;
-            flex-wrap: wrap;
-            height: 300px;
-
-            .lista__tipo {
-                width: 200px;
-                min-width: 200px;
-                max-width: 230px;
-                height: 70px;
-
-                .lista__img {
-                    margin-right: 8px;
-                    width: 40px;
-                }
-
-                .lista__nombre {
-                    font-size: 1.2rem;
-                }
-
-            }
+        .lista__nombre {
+          font-size: 1.3rem;
         }
+      }
     }
+  }
 }
 
-@media screen and (max-width: 555px) {
-    .tecno {
-        padding: 0px;
+// RESPONSIVE FOR MOBILE
+@media screen and (max-width: 540px) {
+  .sobre-mi,
+  .tecno {
+    padding: 0 20px;
+  }
 
-        .tecno__title,
-        .subrayado {
-            margin-left: 40px;
-        }
+  .proyectos .proyect-title-container{
+    padding: 0 20px;
 
-        .lista {
-            padding: 0 10px;
-            display: flex;
-            flex-wrap: wrap;
-            height: auto;
+  }
 
-            .lista__img {
-                margin-right: 8px;
-            }
+  .tecno {
+    .lista .lista__tipo {
+      width: 150px;
 
-            .lista__tipo {
-                width: 170px;
-                min-width: 150px;
-                max-width: 200px;
-                height: 55px;
+      .lista__img {
+        width: 35px;
+      }
 
-                .lista__img {
-                    margin-right: 8px;
-                    width: 35px;
-                }
-
-                .lista__nombre {
-                    font-size: 1rem;
-                }
-            }
-        }
+      .lista__nombre {
+        font-size: 1rem;
+      }
     }
-}
-
-@media screen and (max-width: 377px) {
-    .tecno {
-        .lista {
-            height: auto;
-        }
-    }
-}
-
-@media screen and (max-width:330px) {
-    .navbar-fixed {
-        .container__title {
-            .code-title {
-                font-size: 17px;
-            }
-
-            .code-logo {
-                font-size: 23px;
-            }
-        }
-    }
+  }
 }
