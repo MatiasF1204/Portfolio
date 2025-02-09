@@ -53,6 +53,7 @@ body {
 
     .principal__img {
       width: 30vw;
+      min-width: 350px;
     }
 
     .info {
@@ -251,6 +252,7 @@ body {
 
 @media only screen and (max-width: 900px) {
   .padre {
+    margin-top: -50px;
     padding: 0;
     gap: 50px;
   }
@@ -276,6 +278,13 @@ body {
   .principal {
     height: 100vh;
     min-height: 650px;
+
+    .principal__container {
+      .principal__img {
+        width: 60vw;
+        min-width: 270px;
+      }
+    }
   }
 
   .sobre-mi {
@@ -317,9 +326,8 @@ body {
     padding: 0 20px;
   }
 
-  .proyectos .proyect-title-container{
+  .proyectos .proyect-title-container {
     padding: 0 20px;
-
   }
 
   .tecno {
