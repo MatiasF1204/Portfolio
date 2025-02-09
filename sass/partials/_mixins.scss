@@ -1,21 +1,21 @@
-@mixin hover{
-    transition: transform 0.3s ease;
-    transform: scale(1.1); 
+@mixin hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
 }
 
-@mixin section-title{
-    color: white;
-    font-size: $font-size-titulos;
-    font-weight: bold;
-    margin: 0;
-    padding-bottom: 15px
+@mixin section-title {
+  color: white;
+  font-size: $font-size-titulos;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 15px;
 }
 
 @mixin subrayado {
-    width: 100px;
-    height: 4px;
-    border-color:  rgb(55, 140, 251);
-    border-radius: 20px;
-    background-color: rgb(55, 140, 251);
-    margin-bottom: 20px;
+  width: 100px;
+  height: 4px;
+  border-color: rgb(55, 140, 251);
+  border-radius: 20px;
+  background-color: rgb(55, 140, 251);
+  margin-bottom: 20px;
 }

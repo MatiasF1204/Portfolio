@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Inicialización del menú hamburguesa
   var elems = document.querySelectorAll(".sidenav");
   var instances = M.Sidenav.init(elems, {});
-
+  
   // Función para manejar el desplazamiento suave y cerrar el menú
   function smoothScrollAndClose(event) {
     event.preventDefault();
@@ -28,10 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     }
   }
-
   // Adjuntar el manejador de clics a los elementos del menú
   $(".sidenav a, .nav-wrapper a").on("click", smoothScrollAndClose);
 });
-
 // Activación de wow.js
 new WOW().init();

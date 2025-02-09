@@ -68,7 +68,7 @@ body {
         font-size: $font-size-titulos;
         font-weight: $font-weight-titulos;
         margin: 0;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
       }
 
       .info__dev {
@@ -103,7 +103,7 @@ body {
         display: flex;
         justify-content: center;
         gap: 15px;
-        margin: 10px 0 25px;
+        margin: 20px 0 25px;
 
         .link {
           font-size: 25px;
@@ -171,7 +171,7 @@ body {
 // Technolgies section
 .tecno {
   width: 100%;
-  padding: 35px;
+  padding: 80px 35px;
 
   .subrayado {
     @include subrayado;
@@ -210,6 +210,8 @@ body {
 
 // Projects
 .proyectos {
+  width: 100%;
+
   .proyect-title-container {
     padding: 0 35px;
   }
